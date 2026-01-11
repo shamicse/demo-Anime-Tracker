@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions about AnimeTracker - Your anime tracking and recommendation platform.">
+    <title>FAQ - AnimeTracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .faq-section {
+            padding: 2rem 0;
+        }
+        .faq-item {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            border-color: var(--primary-color);
+        }
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--light-text);
+            user-select: none;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+            padding: 0 1.5rem 1.5rem;
+        }
+        .faq-answer p {
+            color: var(--gray-text);
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+        .faq-answer ul {
+            margin-left: 2rem;
+            color: var(--gray-text);
+            line-height: 1.8;
+        }
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+        .faq-category h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        @media (max-width: 768px) {
+            .faq-question {
+                padding: 1.25rem;
+                font-size: 0.95rem;
+            }
+            .faq-answer {
+                padding: 0 1.25rem;
+            }
+            .faq-item.active .faq-answer {
+                padding: 0 1.25rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">AnimeTracker</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" id="global-search-input" placeholder="Search anime..." class="nav-search-input">
+                <button class="nav-search-btn" id="global-search-btn">🔍</button>
+                <div class="search-results" id="global-search-results" style="display: none;"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="anime-list.html">Anime List</a></li>
+                <li><a href="recommendations.html">Recommendations</a></li>
+                <li><a href="my-watchlist.html">Watchlist</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">More</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="updates.html">Updates</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html" class="active">FAQ</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about AnimeTracker</p>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-category">
+                <h2>General Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What is AnimeTracker?</div>
+                    <div class="faq-answer">
+                        <p>AnimeTracker is a comprehensive platform designed to help anime enthusiasts discover, track, and manage their favorite anime series. You can create personalized watchlists, get recommendations, read reviews, and connect with the anime community.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is AnimeTracker free to use?</div>
+                    <div class="faq-answer">
+                        <p>Yes! AnimeTracker is completely free to use. You can create an account, track your anime, create watchlists, and access all features without any cost. We're committed to providing a free service to the anime community.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do I need to create an account?</div>
+                    <div class="faq-answer">
+                        <p>While you can browse anime and read content without an account, creating an account unlocks many features including:</p>
+                        <ul>
+                            <li>Personal watchlist management</li>
+                            <li>Saving your favorite anime</li>
+                            <li>Rating and reviewing anime</li>
+                            <li>Getting personalized recommendations</li>
+                            <li>Participating in community discussions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I search for anime?</div>
+                    <div class="faq-answer">
+                        <p>You can search for anime using the search bar in the navigation menu. Simply type the anime title, and you'll see instant results. You can also browse our extensive anime list and use filters to find anime by genre, year, rating, and more.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h2>Watchlist & Tracking</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I add anime to my watchlist?</div>
+                    <div class="faq-answer">
+                        <p>To add anime to your watchlist, simply navigate to any anime's detail page and click the "Add to Watchlist" button. You can organize your anime into different categories like "Watching", "Completed", "Plan to Watch", "Dropped", and more.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I track my progress while watching an anime?</div>
+                    <div class="faq-answer">
+                        <p>Yes! When you add an anime to your watchlist, you can track your progress by updating the episode count. The progress bar will automatically update to show how much of the series you've completed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I rate an anime?</div>
+                    <div class="faq-answer">
+                        <p>You can rate anime on a 1-10 scale by visiting the anime's detail page and clicking the "Rate" button. Your ratings help us provide better recommendations and contribute to the community's overall rating system.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What's the difference between Watchlist and Watch Later?</div>
+                    <div class="faq-answer">
+                        <p>Your Watchlist contains all anime you're currently tracking, including those you're watching, have completed, or plan to watch. "Watch Later" is a specific category for anime you want to save for future viewing but haven't started yet.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h2>Recommendations</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How does the recommendation system work?</div>
+                    <div class="faq-answer">
+                        <p>Our recommendation system uses your watchlist, ratings, and preferences to suggest anime you might enjoy. The more you rate and track anime, the better our recommendations become. You can also manually set preferences like favorite genres, themes, and styles.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I customize my recommendations?</div>
+                    <div class="faq-answer">
+                        <p>Absolutely! Visit the Recommendations page where you can set filters for genres, themes, anime type (TV, Movie, OVA), and more. You can also exclude certain genres or anime you've already watched.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h2>Community & Features</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I write reviews?</div>
+                    <div class="faq-answer">
+                        <p>Yes! After watching an anime, you can write detailed reviews to share your thoughts with the community. Reviews help other users discover great anime and avoid those that might not suit their preferences.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I participate in community discussions?</div>
+                    <div class="faq-answer">
+                        <p>Visit our Community page to see featured discussions. You can join conversations, share your opinions, and connect with other anime fans. Make sure you're logged in to participate fully.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Where does the anime data come from?</div>
+                    <div class="faq-answer">
+                        <p>We aggregate anime information from multiple trusted sources including MyAnimeList (MAL) and AniList APIs. This ensures our database is comprehensive, up-to-date, and accurate.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h2>Technical & Account</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is my data safe and secure?</div>
+                    <div class="faq-answer">
+                        <p>Yes, we take data security seriously. All user data is encrypted and stored securely. We use industry-standard security practices to protect your information. Your personal watchlists and preferences are private unless you choose to share them.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I export my watchlist?</div>
+                    <div class="faq-answer">
+                        <p>Currently, you can view and manage your watchlist directly on the site. Export functionality may be added in future updates based on user feedback.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What browsers are supported?</div>
+                    <div class="faq-answer">
+                        <p>AnimeTracker works best on modern browsers including Chrome, Firefox, Safari, and Edge. We recommend using the latest version of your browser for the best experience. The site is also fully mobile-responsive.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">I forgot my password. How do I reset it?</div>
+                    <div class="faq-answer">
+                        <p>On the login page, click "Forgot Password" and enter your email address. You'll receive instructions to reset your password. If you continue having issues, please contact our support team.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 2rem 0; background-color: var(--card-bg);">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 1rem;">Still Have Questions?</h2>
+            <p style="color: var(--gray-text); margin-bottom: 2rem;">Can't find the answer you're looking for? Please get in touch with our friendly team.</p>
+            <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AnimeTracker</h3>
+                    <p>Your personal anime tracking and recommendation platform.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="anime-list.html">Anime List</a></li>
+                        <li><a href="recommendations.html">Recommendations</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="updates.html">Updates</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="login.html">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AnimeTracker. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

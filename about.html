@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about AnimeTracker - Our mission, vision, and commitment to the anime community.">
+    <title>About Us - AnimeTracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .about-section {
+            padding: 2rem 0;
+        }
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .about-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .about-intro h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .about-intro p {
+            color: var(--gray-text);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .about-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+        .about-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .about-card p {
+            color: var(--gray-text);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .about-card ul {
+            margin-left: 2rem;
+            color: var(--gray-text);
+            line-height: 1.8;
+        }
+        .about-card li {
+            margin-bottom: 0.5rem;
+        }
+        .team-section {
+            margin-top: 3rem;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .value-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        .value-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .value-card h4 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .value-card p {
+            color: var(--gray-text);
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">AnimeTracker</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" id="global-search-input" placeholder="Search anime..." class="nav-search-input">
+                <button class="nav-search-btn" id="global-search-btn">🔍</button>
+                <div class="search-results" id="global-search-results" style="display: none;"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="anime-list.html">Anime List</a></li>
+                <li><a href="recommendations.html">Recommendations</a></li>
+                <li><a href="my-watchlist.html">Watchlist</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">More</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="updates.html">Updates</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>About AnimeTracker</h1>
+            <p>Your trusted companion in the world of anime</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-intro">
+                    <h2>Welcome to AnimeTracker</h2>
+                    <p>AnimeTracker was born from a simple idea: anime fans deserve a better way to discover, track, and share their favorite series. Founded by passionate anime enthusiasts, we've built a platform that combines powerful tracking tools with a vibrant community of like-minded fans.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Our Mission</h3>
+                    <p>Our mission is to provide anime fans with the best possible platform for discovering new anime, tracking their viewing progress, and connecting with the global anime community. We believe that everyone should have easy access to comprehensive anime information and the tools to manage their personal anime journey.</p>
+                    <p>We're committed to:</p>
+                    <ul>
+                        <li>Providing accurate, up-to-date anime information</li>
+                        <li>Creating intuitive tools for tracking and organizing anime</li>
+                        <li>Building a welcoming and inclusive community</li>
+                        <li>Continuously improving based on user feedback</li>
+                        <li>Keeping our platform free and accessible to everyone</li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <h3>What We Offer</h3>
+                    <p>AnimeTracker provides a comprehensive suite of features designed to enhance your anime watching experience:</p>
+                    <ul>
+                        <li><strong>Extensive Anime Database:</strong> Access information on thousands of anime series, movies, and OVAs from multiple trusted sources</li>
+                        <li><strong>Personal Watchlists:</strong> Organize your anime into custom categories like "Watching", "Completed", "Plan to Watch", and more</li>
+                        <li><strong>Smart Recommendations:</strong> Get personalized anime suggestions based on your preferences, ratings, and viewing history</li>
+                        <li><strong>Rating System:</strong> Rate and review anime to help others discover great shows</li>
+                        <li><strong>Community Features:</strong> Connect with other fans, participate in discussions, and share your thoughts</li>
+                        <li><strong>Blog & Content:</strong> Read articles, guides, and insights about the anime world</li>
+                        <li><strong>Mobile-Friendly Design:</strong> Access your watchlist and explore anime from any device</li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <h3>Our Story</h3>
+                    <p>AnimeTracker started as a personal project by anime fans who were frustrated with existing tracking solutions. We wanted something that was both powerful and easy to use, with a modern interface and comprehensive features.</p>
+                    <p>After months of development and testing, we launched AnimeTracker with a simple goal: to create the best anime tracking platform we could imagine. Today, we're proud to serve thousands of anime fans worldwide, and we're constantly working to improve and expand our platform.</p>
+                    <p>We're a small but dedicated team of developers, designers, and anime enthusiasts who believe in making great tools for the community. Every feature we add, every bug we fix, and every improvement we make is driven by our passion for anime and our commitment to our users.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3>Our Values</h3>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">🎯</div>
+                            <h4>User-First</h4>
+                            <p>Everything we do is focused on providing the best experience for our users. Your feedback shapes our decisions.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">🤝</div>
+                            <h4>Community-Driven</h4>
+                            <p>We believe in the power of community. AnimeTracker is built for fans, by fans, and we value every member of our community.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">🚀</div>
+                            <h4>Continuous Innovation</h4>
+                            <p>We're always looking for ways to improve and add new features. AnimeTracker evolves based on the needs of our users.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">🔓</div>
+                            <h4>Free & Accessible</h4>
+                            <p>We believe great tools should be available to everyone. AnimeTracker will always remain free and accessible.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">📊</div>
+                            <h4>Data Accuracy</h4>
+                            <p>We source information from multiple trusted APIs to ensure our anime database is comprehensive and accurate.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">❤️</div>
+                            <h4>Passion for Anime</h4>
+                            <p>We're anime fans ourselves. Our love for anime drives everything we do and every feature we build.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <h3>Join Us</h3>
+                    <p>Whether you're a casual viewer or a hardcore anime enthusiast, AnimeTracker is here to enhance your anime experience. We're constantly growing and improving, and we'd love to have you be part of our community.</p>
+                    <p>Have suggestions, feedback, or just want to say hello? We'd love to hear from you! Visit our <a href="contact.html" style="color: var(--primary-color);">Contact page</a> to get in touch.</p>
+                    <p style="margin-top: 2rem;">
+                        <a href="login.html" class="btn btn-primary" style="margin-right: 1rem;">Join AnimeTracker</a>
+                        <a href="blog.html" class="btn btn-secondary">Read Our Blog</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AnimeTracker</h3>
+                    <p>Your personal anime tracking and recommendation platform.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="anime-list.html">Anime List</a></li>
+                        <li><a href="recommendations.html">Recommendations</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="updates.html">Updates</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="login.html">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AnimeTracker. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
